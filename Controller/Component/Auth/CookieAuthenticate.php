@@ -50,7 +50,7 @@ class CookieAuthenticate extends BaseAuthenticate {
  * @return mixed False on login failure. An array of User data on success.
  * @throws CakeException
  */
-	public function getUser(CakeRequest $request) {
+	public function getUser($request) {
 		if (!isset($this->_Collection->Cookie) || !$this->_Collection->Cookie instanceof CookieComponent) {
 			throw new CakeException('CookieComponent is not loaded');
 		}
